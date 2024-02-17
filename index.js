@@ -1,7 +1,4 @@
 'use strict';
-// we add *20 to make the number between 0-20
-//and we use Math.trunc to نسوي تقريب
-// and we add +1 because the range is 0-19 never include 20 so we add + 1 to include it
 let secretNumber = Math.trunc(Math.random() * 20) + 1;
 let score = 20;
 let highscore = 0;
@@ -43,28 +40,6 @@ document.querySelector('.check').addEventListener('click', function () {
     }
   }
 });
-
-//   } else if (guess > secretNumber) {
-//     if (score > 1) {
-//       document.querySelector('.message').textContent = '📈 too high !';
-//       score--;
-//       document.querySelector('.score').textContent = score;
-//     } else {
-//       document.querySelector('.message').textContent = '💥You lost the game!';
-//       document.querySelector('.score').textContent = 0;
-//     }
-
-//     //when player input low
-//   } else if (guess < secretNumber) {
-//     if (score > 1) {
-//       document.querySelector('.message').textContent = '📉 too low !';
-//       score--;
-//       document.querySelector('.score').textContent = score;
-//     } else {
-//       document.querySelector('.message').textContent = '💥You lost the game!';
-//       document.querySelector('.score').textContent = 0;
-//     }
-//   }
 
 document.querySelector('.again').addEventListener('click', function () {
   secretNumber = Math.trunc(Math.random() * 20) + 1;
